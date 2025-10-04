@@ -1,0 +1,39 @@
+{
+"version": "0.2.0",
+"configurations": [
+{
+"name": "Run Generate Data",
+"type": "python",
+"request": "launch",
+"program": "${workspaceFolder}/src/generate_data.py",
+"console": "integratedTerminal"
+},
+{
+"name": "Run Preprocess",
+"type": "python",
+"request": "launch",
+"program": "${workspaceFolder}/src/preprocess.py",
+"console": "integratedTerminal"
+},
+{
+"name": "Run Train Model",
+"type": "python",
+"request": "launch",
+"program": "${workspaceFolder}/src/train_model.py",
+"console": "integratedTerminal",
+"args": ["--model", "rf"]
+},
+{
+"name": "Run Streamlit App",
+"type": "python",
+"request": "launch",
+"program": "-m",
+"args": [
+"streamlit",
+"run",
+"${workspaceFolder}/src/app.py"
+],
+"console": "integratedTerminal"
+}
+]
+}
